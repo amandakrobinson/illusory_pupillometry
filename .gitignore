@@ -1,0 +1,7 @@
+### PUPIL ###
+ARCHIVE/
+data/
+*.DS_Store
+Figures/*.pptx
+stimuli/
+Manuscript/
