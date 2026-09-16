@@ -80,11 +80,12 @@ save('results/stats_illusory_graded.mat','stats','-v7.3');
 
 %% report
 fprintf('\n=== Within-illusory graded model (outcome = illusory pupil) ===\n');
+betas= stats.B;pnames = stats.pnames;
 for k = 1:4
     mb = mean(betas(k,:,:),3);
     [~,pk] = max(abs(mb));
-    fprintf('%-15s peak beta %+0.4f at %4d ms | max BF %.3g\n', ...
-        pnames{k}, mb(pk), round(timevect(pk)), max(stats.results.(pnames{k}).bf));
+    fprintf('%-15s peak beta %+0.4f at %4d ms, BF=%.3g  | max BF %.3g\n', ...
+        pnames{k}, mb(pk), round(stats.timevect(pk)), stats.results.(pnames{k}).bf(pk), max(stats.results.(pnames{k}).bf));
 end
 fprintf(['\nRead face-likeness and categorisation as the graded predictors; ' ...
     'valence and luminance are controls.\n']);

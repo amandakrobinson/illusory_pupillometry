@@ -79,6 +79,6 @@ fprintf('\n=== Rank regression (category + ranked luminance + ranked valence) ==
 for i = 1:numel(stats.predictors)
     s = stats.results.(stats.predictors{i});
     [~,pk] = max(abs(s.mu));
-    fprintf('\n%-20s peak beta %+0.4f at %4d ms | max BF %.3g%s \n', ...
-        stats.predictors{i}, s.mu(pk), round(timevect(pk)), max(s.bf));
+    fprintf('\n%-20s peak beta %+0.4f at %4d ms, BF=%.3g | max BF %.3g%s \n', ...
+        stats.predictors{i}, s.mu(pk), round(stats.timevect(pk)), s.bf(pk), max(s.bf));
 end
