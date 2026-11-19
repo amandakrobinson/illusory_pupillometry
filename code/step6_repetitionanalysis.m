@@ -26,7 +26,7 @@ slope = nan(nSub,nT);   % per-session-difference regressed on session, per subj
 for d = 1:nSub
     S = load(fullfile('results',datafiles(d).name), ...
         'repTrial_pupil','repTrial_category','repTrial_session','repTrial_image');
-    pup  = S.repTrial_pupil;         % [nTime x nTrials]
+    pup  = S.repTrial_pupil*.07;         % pupil size mm [nTime x nTrials]
     cat  = S.repTrial_category(:);   % 1=face 2=illusory 3=object
     sess = S.repTrial_session(:);
     img  = S.repTrial_image(:);

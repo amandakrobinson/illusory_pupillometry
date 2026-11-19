@@ -3,7 +3,7 @@
 load('results/stats_rank_regression.mat')
 
 preds = stats.predictors;
-labels = {'Human face vs Object' 'Illusory face vs object' 'Illusory face vs human face' 'Luminance' 'Valence'};
+labels = {'Human face vs object' 'Illusory face vs object' 'Illusory face vs human face' 'Luminance' 'Valence'};
 timevect=stats.timevect;
 
 %% plot betas

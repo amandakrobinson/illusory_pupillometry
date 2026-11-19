@@ -3,7 +3,7 @@
 % by top/bottom valence
 
 load('results/allres.mat')
-pd_perim = dat.pupil_perim;
+pd_perim = dat.pupil_perim*.07; % convert to mm
 allres = dat;
 
 load('results/allmodeldata.mat')
@@ -36,9 +36,10 @@ title('Category')
 legend({'Human face' 'Illusory face' 'Non-face object'},...
     'Box','off','Location','best')
 set(gca,'FontSize',18)
-ylabel('Change in pupil diameter')
+ylabel('Change in pupil diameter (mm)')
 xlabel('Time from image onset (ms)')
 xlim([-267 1500])
+ylim([-.11 .05])
 
 % plot luminance
 
@@ -68,9 +69,9 @@ c=colorbar(l,'Ticks',[.05 .95],'TickLabels',{'brightest\newline10%' 'darkest\new
 c.Position = [.57 .16 .01 .3];
 title('Luminance')
 set(l,'FontSize',18)
-ylabel('Change in pupil diameter')
+ylabel('Change in pupil diameter (mm)')
 xlabel('Time from image onset (ms)')
-ylim([-1.5 .7])
+ylim([-.11 .05])
 xlim([-267 1500])
 
 % plot valence
@@ -102,9 +103,9 @@ c=colorbar(v,'Ticks',[.05 .95],...
 c.Position = [.85 .16 .01 .3];
 title('Valence')
 set(v,'FontSize',18)
-ylabel('Change in pupil diameter')
+ylabel('Change in pupil diameter (mm)')
 xlabel('Time from image onset (ms)')
-ylim([-1.5 .7])
+ylim([-.11 .05])
 xlim([-267 1500])
 
 %%

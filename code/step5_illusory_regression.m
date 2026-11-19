@@ -40,7 +40,7 @@ pnames = {'facelikeness','categorisation','valence','luminance'};
 %% get data
 load('results/allres.mat','dat')
 
-pd       = dat.pupil_perim;     % [nTime x 300 x nSubj]  (mean per image)
+pd       = dat.pupil_perim*.07;     % pupil size in mm [nTime x 300 x nSubj]  (mean per image)
 timevect = dat.timevect;
 
 %% run regression

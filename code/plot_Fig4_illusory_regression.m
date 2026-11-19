@@ -31,7 +31,7 @@ set(l,'FontSize',18)
 ylabel('Betas')
 xlabel('Time from image onset (ms)')
 xlim([-267 1500])
-ylim([-.05 .1])
+ylim([-.004 .008])
 
 for n = 1:2%length(preds)
     a=subplot(10,1,5+n);

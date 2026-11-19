@@ -11,7 +11,7 @@
 
 %% load data
 load('results/allres.mat','dat')
-pd = dat.pupil_perim;            % [nTime x 300 x nSub]
+pd = dat.pupil_perim*.07;            % pupil size mm [nTime x 300 x nSub]
 timevect = dat.timevect;
 nTime = size(pd,1); nSub = size(pd,3);
 
