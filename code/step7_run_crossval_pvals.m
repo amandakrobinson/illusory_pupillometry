@@ -80,7 +80,7 @@ for p = 1:nPred
 
     tobs  = tall(1);
     tnull = tall(2:end);
-    pperm = (1 + sum(abs(tnull) >= abs(tobs))) / (nperm + 1);   % one-sided
+    pperm = (1 + sum(abs(tnull) >= abs(tobs))) / (nperm + 1);
 
     r = struct();
     r.values      = obsVals;            % sign-aligned held-out betas
@@ -171,7 +171,7 @@ for p = 1:nPred
 
     tobs  = tall(1);
     tnull = tall(2:end);
-    pperm = (1 + sum(abs(tnull) >= abs(tobs))) / (nperm + 1);   % one-sided
+    pperm = (1 + sum(abs(tnull) >= abs(tobs))) / (nperm + 1); 
 
     r = struct();
     r.values      = obsVals;            % sign-aligned held-out betas
@@ -258,7 +258,7 @@ end
 
 tobs  = tall(1);
 tnull = tall(2:end);
-pperm = (1 + sum(abs(tnull) >= abs(tobs))) / (nperm + 1);   % one-sided
+pperm = (1 + sum(abs(tnull) >= abs(tobs))) / (nperm + 1);
 
 r = struct();
 r.values      = obsVals;            % sign-aligned held-out betas
